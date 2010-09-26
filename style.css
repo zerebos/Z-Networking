@@ -1,0 +1,224 @@
+body {
+font-family: Arial, Verdana;
+text-align: center;
+margin: 0px;
+padding: 0px;
+background: url(images/bg.jpg) #001f32 repeat-x;
+margin-top: 10px;
+}
+
+#contentwrap {
+width: 909px;
+}
+
+#logo {
+background: url(images/logo.png) no-repeat;
+height: 348px;
+}
+
+#nav {
+background: none;
+font-weight: bold;
+font-size: 11pt;
+height: 27px;
+}
+
+#nav a:link, #nav a:active, #nav a:visited {
+text-decoration: none;
+color: #000;
+padding: 4px;
+border-right: 1px solid #000;
+float: left;
+padding-right: 5px;
+height: 20px;
+}
+
+#nav a:hover {
+background: url(images/navbg2.jpg) repeat-x;
+
+color: #fff;
+}
+
+#area {
+background: url(images/content.png) repeat-y;
+color: white;
+padding: 10px;
+text-align: center;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+
+h1 {
+margin: 0px;
+text-align: left;
+border-bottom: 2px solid white;
+margin-bottom: 5px;
+}
+
+#footer {
+background: url(images/navbg.jpg) repeat-x;
+height: 22px;
+font-size: 10pt;
+font-style: italic;
+font-weight: bold;
+padding-top: 5px;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+border-left: 1px solid black;
+}
+
+
+#links {
+font-size: 8pt;
+font-style: italic;
+font-weight: bold;
+padding-top: 5px;
+color: #999;
+margin-bottom: 10px;
+}
+
+#links a:link, #links a:active, #links a:visited {
+color: #999;
+text-decoration:none;
+}
+
+#links a:hover {
+color: #fff;
+text-decoration:underline;
+}
+
+a:link, a:visited, a:active {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+ul {
+list-style: circle;
+}
+
+#networkbar {
+width: 100%;
+background: url(images/networkbg.jpg);
+border-bottom: 1px solid white;
+font-size: 8pt;
+color: white;
+text-align: left;
+padding-top: 0px;
+height: 25px;
+overflow: hidden;
+margin-bottom: 10px;
+}
+
+#networkbar a:link, #networkbar a:active, #networkbar a:visited {
+font-size: 8pt;
+}
+
+#networkbar img {
+background: transparent;
+padding: 0px;
+margin: 0px 20px 0px 0px;
+vertical-align: middle;
+}
+
+input {
+font-size: 8pt;
+height: 18px;
+}
+
+#networkbarlogin {
+float: right;
+margin-top: 3px;
+}
+
+h2 {
+margin: 0px;
+}
+
+
+/* FORUM */
+table {
+width: 100%;
+text-align: center;
+border-collapse: collapse;
+}
+
+table, tr, td, th {
+border: 2px solid black;
+}
+
+.cat {
+background: black;
+color: white;
+width: 100%;
+}
+
+.forum {
+background: url(images/work.jpg) repeat-x #ff1919;
+color: white;
+height: 50px;
+}
+
+.forumname {
+width: 75%;
+}
+
+.forumname img {
+max-width: 300px;
+max-height: 300px;
+}
+
+.forumposts {
+width: 25%;
+}
+
+th {
+background: black;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+color: white;
+}
+/* END FORUM */
+
+/* DOWNLOADS */
+
+#dl1 {
+background: url(images/dlbg.jpg) repeat-x;
+border: 1px solid white;
+border-bottom: 0px;
+text-align: left;
+font-weight: bold;
+padding-left: 5px;
+color: white;
+}
+
+#dl2 {
+background: url(images/dlbg2.jpg);
+border: 1px solid white;
+border-bottom: 0px;
+text-align: left;
+font-weight: bold;
+padding-left: 5px;
+color: white;
+}
+
+#dltb {
+background: black;
+border: 1px solid white;
+border-bottom: 0px;
+text-align: left;
+font-weight: bold;
+padding-left: 5px;
+color: #999;
+}
+
+h3 {
+margin-bottom: 5px;
+}
+
+/* END DOWNLOADS */
