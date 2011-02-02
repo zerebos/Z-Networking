@@ -1,11 +1,13 @@
 <?php
 
-$con = mysql_connect("localhost","zack_zack","REDACTED");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
 
-mysql_select_db("zack_elg", $con);
+$con=mysql_connect('127.0.0.1', 'zackrauen', 'REDACTED', 'zackrauen');
+
+if (!$con) {
+    die('Connect Error (' . mysql_connect_errno() . ') '
+            . mysql_connect_error());
+}
+
 session_start();
+
 ?>
