@@ -6,6 +6,6 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("zack_sites", $con);
+mysql_select_db("zack_elg", $con);
 session_start();
 ?>

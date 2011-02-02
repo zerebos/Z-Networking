@@ -4,13 +4,8 @@ include("inc/functions/comments.php");
 }
 else {
 ?>
-<h3>Welcome</h3>
-<?php
-$welcome = mysql_query("SELECT * FROM znetworking_sitecontent WHERE page = 'Welcome'");
-$wel = mysql_fetch_array($welcome);
-echo $wel['content'];
-?>
-<h1>News</h1>
+
+<h2>News</h2>
 <?php
 if ($_GET['pg']) {
 $pg = $_GET['pg'];
@@ -32,9 +27,19 @@ $kid = $memrow['id'];
 $knm = $memrow['first'];
 $coms = mysql_query("SELECT * FROM znetworking_newscomments WHERE newsid = '$newsid'");
 $num_rows = mysql_num_rows($coms);
+?>
+<img src="images/posttop.png" alt="" />
+<div id="post">
+
+<?php
 echo "<h3>$newstitle</h3>";
 echo $newspost;
 echo "<br />Posted by: <a href='index.php?page=Profile&id=$kid'>$knm</a>  |  On: $newsdate  |  <a href='index.php?page=Home&id=$newsid'>($num_rows) Comments</a><br />";
+?>
+
+</div>
+<img src="images/postbottom.png" alt="" />
+<?php
 }
 if ($_GET['pg']) {
 $i = $_GET['pg'];

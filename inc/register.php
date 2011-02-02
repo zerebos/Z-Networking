@@ -46,6 +46,12 @@ $iquery = mysql_query("INSERT INTO znetworking_pm (recipient, sender, subject, d
 
 }
 }
+else {
+echo "Please accept the terms.";
+}
+}
+else {
+echo "Please fill out required fields.";
 }
 if ($LC==FALSE) {
 ?>

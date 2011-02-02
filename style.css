@@ -1,26 +1,31 @@
 body {
+background: #111;
 font-family: Arial, Verdana;
 text-align: center;
 margin: 0px;
 padding: 0px;
-background: url(images/bg.jpg) #001f32 repeat-x;
-margin-top: 10px;
+background: url(images/bg.png);
+background-attachment:fixed;
 }
 
 #contentwrap {
-width: 909px;
+width: 800px;
 }
 
 #logo {
-background: url(images/logo.png) no-repeat;
-height: 348px;
+background: url(images/logo4.jpg);
+height: 135px;
+border-right: 1px solid black;
+border-top: 1px solid black;
+border-left: 1px solid black;
 }
 
 #nav {
-background: none;
+background: url(images/navbg.jpg) repeat-x;
 font-weight: bold;
 font-size: 11pt;
 height: 27px;
+border: 1px solid black;
 }
 
 #nav a:link, #nav a:active, #nav a:visited {
@@ -40,14 +45,16 @@ color: #fff;
 }
 
 #area {
-background: url(images/content.png) repeat-y;
+background: #2a2a2a;
 color: white;
 padding: 10px;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+border-left: 1px solid black;
 text-align: center;
-padding-left: 15px;
-padding-right: 15px;
+padding-left: 175px;
+padding-right: 175px;
 }
-
 
 h1 {
 margin: 0px;

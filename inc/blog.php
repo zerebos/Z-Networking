@@ -44,7 +44,7 @@ $done = 1;
 }
 }
 
-if ($admin) {
+if ($admin && $eid) {
 $quack = "&editid=$eid";
 }
 if (!$id && !$view) {
@@ -77,10 +77,17 @@ $showmesally = 1;
 if ($mmrow['showb']=="1" || $admin || $showmesally) {
 $post = $row['post'];
 $date = $row['date'];
+?>
+<img src="images/posttop.png" alt="" />
+<div id="post">
+<?php
 echo "<h3>$title</h3>";
 echo $post;
 echo "<br />Posted by: <a href='index.php?page=Profile&id=$uid'>$author</a>  |  On: $date<br /><br /><br />";
-
+?>
+</div>
+<img src="images/postbottom.png" alt="" />
+<?php
 }
 
 else {
