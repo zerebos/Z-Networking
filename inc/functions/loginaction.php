@@ -7,19 +7,19 @@ $salt = “thisspecificsaltencodingforznetworkingisgoingtobeverylongbecauseineedve
 $md5pass = md5($salt . $pass);
 if ($user && $pass) {
 if ($user && $pass) {
-$query = mysql_query("SELECT * FROM znetworking_admins WHERE user='$user'");
+$query = mysqli_query($con, "SELECT * FROM znetworking_admins WHERE username='$user'");
 if ($query) {
-$row = mysql_fetch_array($query);
+$row = mysqli_fetch_array($query);
 $sqlpass = $row['pass'];
-$sqluser = $row['user'];
+$sqluser = $row['username'];
 }
 }
 if ($user && $pass) {
-$mquery = mysql_query("SELECT * FROM znetworking_members WHERE user='$user'");
+$mquery = mysqli_query($con, "SELECT * FROM znetworking_members WHERE username='$user'");
 if ($mquery) {
-$mrow = mysql_fetch_array($mquery);
-$msqlpass = $mrow['pass'];
-$msqluser = $mrow['user'];
+$mrow = mysqli_fetch_array($mquery);
+$msqlpass = $mrow['password_hash'];
+$msqluser = $mrow['username'];
 $msqlid = $mrow['id'];
 }
 }
@@ -33,10 +33,10 @@ if ($md5pass==$msqlpass) {
 session_start();
 $_SESSION['member'] = $msqluser;
 if ($rem) {
-$expire = time()+60*60*24*14;
+$expire = strtotime( '+14 days' );
 setcookie("user", $msqluser, $expire);
 }
-$query = mysql_query("UPDATE znetworking_members SET logged = '$date' WHERE id = '$msqlid'");
+$query = mysqli_query($con, "UPDATE znetworking_members SET last_login = '$date' WHERE id = '$msqlid'");
 
 }
 

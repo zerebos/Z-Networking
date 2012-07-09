@@ -14,19 +14,19 @@ $ppg = $pg * 5;
 else {
 $ppg = 0;
 }
-$nquery = mysql_query("SELECT * FROM znetworking_news ORDER BY id DESC LIMIT $ppg, 5");
-while ($nrow = mysql_fetch_array($nquery)) {
+$nquery = mysqli_query($con,"SELECT * FROM znetworking_news ORDER BY id DESC LIMIT $ppg, 5");
+while ($nrow = mysqli_fetch_array($nquery)) {
 $newstitle = $nrow['title'];
 $newsid = $nrow['id'];
-$newspost = $nrow['post'];
-$newsadmin = $nrow['admin'];
-$newsdate = $nrow['date'];
-$memquery = mysql_query("SELECT * FROM znetworking_members WHERE user = '$newsadmin'");
-$memrow = mysql_fetch_array($memquery);
+$newspost = $nrow['content'];
+$newsadmin = $nrow['admin_id'];
+$newsdate = $nrow['timestamp'];
+$memquery = mysqli_query($con,"SELECT * FROM znetworking_members WHERE user = '$newsadmin'");
+$memrow = mysqli_fetch_array($memquery);
 $kid = $memrow['id'];
 $knm = $memrow['first'];
-$coms = mysql_query("SELECT * FROM znetworking_newscomments WHERE newsid = '$newsid'");
-$num_rows = mysql_num_rows($coms);
+$coms = mysqli_query($con,"SELECT * FROM znetworking_newscomments WHERE news_id = '$newsid'");
+$num_rows = mysqli_num_rows($coms);
 ?>
 <img src="images/posttop.png" alt="" />
 <div id="post">

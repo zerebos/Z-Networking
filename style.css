@@ -1,47 +1,64 @@
+* {box-sizing: border-box;}
+
 body {
-background: #111;
-font-family: Arial, Verdana;
-text-align: center;
-margin: 0px;
-padding: 0px;
-background: url(images/bg.png);
-background-attachment:fixed;
+	background: #555;
+	font-family: Arial, Verdana;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 50px;
 }
 
 #contentwrap {
-width: 800px;
+width: 1200px;
 }
 
 #logo {
-background: url(images/logo4.jpg);
-height: 135px;
+background: url(images/logo2.png) center center no-repeat #7d0c0c;
+height: 162px;
 border-right: 1px solid black;
 border-top: 1px solid black;
 border-left: 1px solid black;
+position:relative;
 }
 
-#nav {
-background: url(images/navbg.jpg) repeat-x;
+nav {
+background: rgba(0,0,0,0.6);
 font-weight: bold;
+color: white;
 font-size: 11pt;
-height: 27px;
 border: 1px solid black;
+position: absolute;
+bottom:0;
+left:0;
+right:0;
+text-align:center;
+width: 100%;
 }
 
-#nav a:link, #nav a:active, #nav a:visited {
+#mainNav {
+	list-style-type: none;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+#mainNav li {
+	display: inline-block;
+	float: left;
+}
+
+
+nav a, nav a:active, nav a:visited {
 text-decoration: none;
-color: #000;
-padding: 4px;
-border-right: 1px solid #000;
-float: left;
-padding-right: 5px;
-height: 20px;
+color: white;
+display: block;
+padding: 10px 15px;
 }
 
-#nav a:hover {
-background: url(images/navbg2.jpg) repeat-x;
-
-color: #fff;
+nav a:hover {
+background: rgba(0,0,0,0.5);
+text-decoration: none;
+color: white;
 }
 
 #area {
@@ -64,12 +81,13 @@ margin-bottom: 5px;
 }
 
 #footer {
-background: url(images/navbg.jpg) repeat-x;
-height: 22px;
+background: url(images/footer.png) center center no-repeat #7d0c0c;
+height: 28px;
 font-size: 10pt;
 font-style: italic;
 font-weight: bold;
-padding-top: 5px;
+padding: 5px;
+
 border-right: 1px solid black;
 border-bottom: 1px solid black;
 border-left: 1px solid black;
@@ -86,7 +104,7 @@ margin-bottom: 10px;
 }
 
 #links a:link, #links a:active, #links a:visited {
-color: #999;
+color: #2a2a2a;
 text-decoration:none;
 }
 
@@ -111,15 +129,22 @@ list-style: circle;
 
 #networkbar {
 width: 100%;
-background: url(images/networkbg.jpg);
+background: linear-gradient(#e61717, #500808);
 border-bottom: 1px solid white;
 font-size: 8pt;
 color: white;
 text-align: left;
-padding-top: 0px;
-height: 25px;
+top: 0;
+left:0;
+right:0;
+height: 35px;
 overflow: hidden;
-margin-bottom: 10px;
+position: fixed;
+}
+
+#networkBarContainer {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 #networkbar a:link, #networkbar a:active, #networkbar a:visited {
@@ -131,6 +156,7 @@ background: transparent;
 padding: 0px;
 margin: 0px 20px 0px 0px;
 vertical-align: middle;
+height: 35px;
 }
 
 input {
@@ -140,7 +166,7 @@ height: 18px;
 
 #networkbarlogin {
 float: right;
-margin-top: 3px;
+line-height:35px;
 }
 
 h2 {

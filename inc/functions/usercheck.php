@@ -2,7 +2,7 @@
 $date = date("m/d/y");
 function LoggedCheck() {
 if ($_SESSION['member'] || $_SESSION['user'] || $_COOKIE['user']) {
-$query = mysql_query("UPDATE znetworking_members SET logged = '$date' WHERE id = '$msqlid'");
+$query = mysqli_query($con, "UPDATE znetworking_members SET logged = '$date' WHERE id = '$msqlid'");
 return TRUE;
 }
 else {

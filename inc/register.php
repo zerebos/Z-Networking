@@ -18,7 +18,7 @@ $md5pass = md5($salt . $password);
 
 if ($password==$password2 && $username && $email && $first && $gender) {
 if ($terms) {
-$query = mysql_query("INSERT INTO znetworking_members (user, pass, first, last, email, showe, age, showa, gender) VALUES ('$username', '$md5pass', '$first', '$last', '$email', '$showe', '$age', '$showa', '$gender')");
+$query = mysqli_query($con, "INSERT INTO znetworking_members (username, password_hash, first_name, last_name, email, show_email, age, show_age, gender) VALUES ('$username', '$md5pass', '$first', '$last', '$email', '$showe', '$age', '$showa', '$gender')");
 echo mysql_error();
 if ($query) {
 echo "Congratulations $username, You have been registered!<br />";
@@ -28,21 +28,21 @@ $subject = "Thanks for registering!";
 $message = "Welcome to Z-Networking\nImportant Info:\nUser: $username\nPass: $password\nPlease dont share your info with anyone.";
 $from = "support@z-networking.org";
 $headers = "From: $from";
-mail($to,$subject,$message,$headers);
+// mail($to,$subject,$message,$headers);
 
 $to2 = "syco_1098@yahoo.com";
 $subject2 = "New Member!";
 $message2 = "$username has just signed up on your site. You can review their account and shoot them an email.";
-mail($to2,$subject2,$message2,$headers);
-$query = mysql_query("INSERT INTO znetworking_contact (email, name, message) VALUES ('$email', '$username', '$message2')");
+// mail($to2,$subject2,$message2,$headers);
+$query = mysqli_query($con, "INSERT INTO znetworking_contact (email, name, message) VALUES ('$email', '$username', '$message2')");
 
 $pm = "Hello and welcome to the site. Here you can be part of a great community on our forums and have your own blog. Our extensive library of media, including our gaming department, will keep you busy for hours. Just a reminder, but you can customize your profile and change your account settings. We even have a Private Messaging system such as the one right here.";
 
-$mquery = mysql_query("SELECT * FROM znetworking_members WHERE user = '$username'");
-$row = mysql_fetch_array($mquery);
+$mquery = mysqli_query($con, "SELECT * FROM znetworking_members WHERE user = '$username'");
+$row = mysqli_fetch_array($mquery);
 $rto = $row['id'];
 
-$iquery = mysql_query("INSERT INTO znetworking_pm (recipient, sender, subject, date, message, status) VALUES ('$rto', '2', 'Welcome', '$date', '$pm', '0')");
+$iquery = mysqli_query($con, "INSERT INTO znetworking_pm (recipient, sender, subject, date, message, status) VALUES ('$rto', '2', 'Welcome', '$date', '$pm', '0')");
 
 }
 }

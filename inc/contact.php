@@ -2,9 +2,7 @@
 $num1 = rand(0, 5);
 $num2 = rand(0, 5);
 ?>
-<strong>Call or Text:</strong> (315) 879-2188<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(585) 755-4042<br />
-<br /><strong><u>Or Email Us:</u></strong><br /><br />
+<br /><strong><u>Contact Us Here:</u></strong><br /><br />
 <form method="get" action="inc/functions/invoice.php">
 Name: <input type="text" name="name" value="<?php echo $msqlemail; ?>" /><br />
 Email: <input type="text" name="email" /><br />

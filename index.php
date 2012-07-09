@@ -47,7 +47,7 @@ $fbtitle = "'$stopic' Forum Post";
     <meta property="og:site_name" content="Z-Tek"/>
 <meta property="fb:admins" content="1360822286" />
 <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="style.css" />
 <?php if (ae_detect_ie()) {
 ?>
 <style type="text/css">
@@ -96,13 +96,15 @@ margin: -22px 20px 10px 0px;
 include("inc/layout/networkbar.php");
 ?>
 <div id="contentwrap">
-<div id="logo">&nbsp;</div>
-<div id="nav">
+<div id="logo">
+<nav>
 <?php
 include("inc/layout/navlinks.php");
 ?>
 
+</nav>
 </div>
+
 <div id="area">
 <?php
 include("showpageactions.php");
@@ -114,7 +116,7 @@ include("showpageactions.php");
 <fb:like href="<?php echo "http://$pageURL"; ?>" width="450" height="80" colorscheme="dark"/>
 </div>
 <div id="footer">
-All content copyright &copy; Z-Tek, all rights reserved.
+All content copyright &copy; Z-Tek, all rights reserved. BULLSHIT
 </div>
 <div id="links">
 <a href="index.php?page=Portfolio">Portfolio</a>  |  <a href="index.php?page=Testimonials">Testimonials</a>  |  <a href="index.php?page=Partners">Partners</a>  |  <a href="index.php?page=Privacy Policy">Privacy Policy</a>  |  <a href="index.php?page=Terms">Terms Of Use</a>  |  <a href="index.php?page=Acceptable Use Policy">Acceptable Use Policy</a>

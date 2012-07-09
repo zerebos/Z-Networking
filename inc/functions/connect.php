@@ -1,7 +1,7 @@
 <?php
 
 
-$con=mysql_connect('127.0.0.1', 'zackrauen', 'REDACTED', 'zackrauen');
+$con=mysqli_connect('127.0.0.1', 'zackraue_zack', 'REDACTED', 'zackraue_dev');
 
 if (!$con) {
     die('Connect Error (' . mysql_connect_errno() . ') '
